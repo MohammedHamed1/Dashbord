@@ -1,0 +1,409 @@
+.dashboard-container {
+  padding: 24px;
+  background: #f5f5f5;
+  min-height: calc(100vh - 64px);
+  direction: rtl;
+}
+
+.dashboard-header {
+  margin-bottom: 24px;
+}
+
+.dashboard-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #262626;
+  margin-bottom: 8px;
+  direction: rtl;
+}
+
+.dashboard-subtitle {
+  font-size: 16px;
+  color: #8c8c8c;
+  margin-bottom: 0;
+  direction: rtl;
+}
+
+/* إحصائيات سريعة */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.stat-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  border: 1px solid #f0f0f0;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  transform: translateY(-2px);
+}
+
+.stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(135deg, #1890ff, #40a9ff);
+}
+
+.stat-card.revenue::before {
+  background: linear-gradient(135deg, #52c41a, #73d13d);
+}
+
+.stat-card.orders::before {
+  background: linear-gradient(135deg, #1890ff, #40a9ff);
+}
+
+.stat-card.users::before {
+  background: linear-gradient(135deg, #722ed1, #9254de);
+}
+
+.stat-card.branches::before {
+  background: linear-gradient(135deg, #fa8c16, #ffa940);
+}
+
+.stat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.stat-title {
+  font-size: 14px;
+  color: #8c8c8c;
+  font-weight: 500;
+  margin-bottom: 4px;
+  direction: rtl;
+}
+
+.stat-value {
+  font-size: 32px;
+  font-weight: 700;
+  color: #262626;
+  line-height: 1.2;
+  direction: rtl;
+}
+
+.stat-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #fff;
+}
+
+.stat-icon.revenue {
+  background: linear-gradient(135deg, #52c41a, #73d13d);
+}
+
+.stat-icon.orders {
+  background: linear-gradient(135deg, #1890ff, #40a9ff);
+}
+
+.stat-icon.users {
+  background: linear-gradient(135deg, #722ed1, #9254de);
+}
+
+.stat-icon.branches {
+  background: linear-gradient(135deg, #fa8c16, #ffa940);
+}
+
+.stat-change {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 8px;
+}
+
+.stat-change.positive {
+  color: #52c41a;
+}
+
+.stat-change.negative {
+  color: #ff4d4f;
+}
+
+/* الرسوم البيانية */
+.charts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.chart-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  border: 1px solid #f0f0f0;
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.chart-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #262626;
+  direction: rtl;
+}
+
+.chart-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.chart-container {
+  height: 300px;
+  position: relative;
+}
+
+/* الأنشطة الأخيرة */
+.activities-section {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  border: 1px solid #f0f0f0;
+}
+
+.activities-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.activities-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #262626;
+  direction: rtl;
+}
+
+.activity-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid #f0f0f0;
+  direction: rtl;
+}
+
+.activity-item:last-child {
+  border-bottom: none;
+}
+
+.activity-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.activity-icon.order {
+  background: #1890ff;
+}
+
+.activity-icon.user {
+  background: #52c41a;
+}
+
+.activity-icon.payment {
+  background: #722ed1;
+}
+
+.activity-icon.rating {
+  background: #fa8c16;
+}
+
+.activity-content {
+  flex: 1;
+}
+
+.activity-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: #262626;
+  margin-bottom: 4px;
+  direction: rtl;
+}
+
+.activity-description {
+  font-size: 13px;
+  color: #8c8c8c;
+  direction: rtl;
+}
+
+.activity-time {
+  font-size: 12px;
+  color: #bfbfbf;
+  direction: rtl;
+}
+
+/* الوضع الداكن */
+.dark-theme .dashboard-container {
+  background: #141414;
+}
+
+.dark-theme .dashboard-title {
+  color: #fff;
+}
+
+.dark-theme .dashboard-subtitle {
+  color: #a6a6a6;
+}
+
+.dark-theme .stat-card,
+.dark-theme .chart-card,
+.dark-theme .activities-section {
+  background: #1f1f1f;
+  border-color: #303030;
+}
+
+.dark-theme .stat-title {
+  color: #a6a6a6;
+}
+
+.dark-theme .stat-value {
+  color: #fff;
+}
+
+.dark-theme .chart-title,
+.dark-theme .activities-title {
+  color: #fff;
+}
+
+.dark-theme .activity-item {
+  border-bottom-color: #303030;
+}
+
+.dark-theme .activity-title {
+  color: #fff;
+}
+
+.dark-theme .activity-description {
+  color: #a6a6a6;
+}
+
+.dark-theme .activity-time {
+  color: #595959;
+}
+
+/* RTL Support */
+[dir="rtl"] .stat-card::before {
+  right: auto;
+  left: 0;
+}
+
+[dir="rtl"] .stat-header {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .chart-header {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .activities-header {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .activity-item {
+  flex-direction: row-reverse;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 16px;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .stat-card {
+    padding: 20px;
+  }
+  
+  .stat-value {
+    font-size: 28px;
+  }
+  
+  .chart-card,
+  .activities-section {
+    padding: 20px;
+  }
+  
+  .chart-container {
+    height: 250px;
+  }
+}
+
+@media (max-width: 576px) {
+  .dashboard-title {
+    font-size: 24px;
+  }
+  
+  .dashboard-subtitle {
+    font-size: 14px;
+  }
+  
+  .stat-card {
+    padding: 16px;
+  }
+  
+  .stat-value {
+    font-size: 24px;
+  }
+  
+  .stat-icon {
+    width: 40px;
+  height: 40px;
+  font-size: 20px;
+  }
+  
+  .chart-card,
+  .activities-section {
+    padding: 16px;
+  }
+  
+  .chart-container {
+    height: 200px;
+  }
+} 

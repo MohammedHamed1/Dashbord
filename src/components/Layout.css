@@ -1,0 +1,81 @@
+.app-layout {
+  min-height: 100vh;
+  direction: rtl;
+}
+
+.app-sider {
+  background: #001529;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+}
+
+.app-header {
+  background: #fff;
+  padding: 0 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.app-content {
+  margin: 24px;
+  padding: 24px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  min-height: calc(100vh - 112px);
+  overflow-y: auto;
+}
+
+/* RTL Support */
+[dir="rtl"] .app-layout {
+  direction: rtl;
+}
+
+[dir="rtl"] .app-sider {
+  border-left: 1px solid #f0f0f0;
+  border-right: none;
+}
+
+[dir="rtl"] .app-header {
+  border-left: 1px solid #f0f0f0;
+  border-right: none;
+}
+
+/* Dark Theme Support */
+.dark-theme .app-header {
+  background: #1f1f1f;
+  color: #fff;
+}
+
+.dark-theme .app-content {
+  background: #1f1f1f;
+  color: #fff;
+}
+
+.dark-theme .app-sider {
+  background: #141414;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .app-content {
+    margin: 12px;
+    padding: 16px;
+  }
+  
+  .app-header {
+    padding: 0 16px;
+  }
+}
+
+/* Arabic Font Support */
+.arabic-font {
+  font-family: 'Cairo', 'Segoe UI', Tahoma, Arial, sans-serif;
+}
+
+.arabic-font .app-content {
+  font-family: 'Cairo', 'Segoe UI', Tahoma, Arial, sans-serif;
+} 

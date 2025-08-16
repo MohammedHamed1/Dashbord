@@ -1,0 +1,382 @@
+.cross-check-widget {
+  margin-bottom: 16px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.cross-check-widget:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.cross-check-widget.success {
+  border-left: 4px solid #52c41a;
+  background: linear-gradient(135deg, #f6ffed 0%, #ffffff 100%);
+}
+
+.cross-check-widget.warning {
+  border-left: 4px solid #faad14;
+  background: linear-gradient(135deg, #fffbe6 0%, #ffffff 100%);
+}
+
+.cross-check-widget.error {
+  border-left: 4px solid #ff4d4f;
+  background: linear-gradient(135deg, #fff2f0 0%, #ffffff 100%);
+  animation: pulse 2s infinite;
+}
+
+.cross-check-compact {
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.cross-check-compact:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cross-check-compact.success {
+  border-left: 3px solid #52c41a;
+  background: #f6ffed;
+}
+
+.cross-check-compact.warning {
+  border-left: 3px solid #faad14;
+  background: #fffbe6;
+}
+
+.cross-check-compact.error {
+  border-left: 3px solid #ff4d4f;
+  background: #fff2f0;
+}
+
+.cross-check-widget .ant-card-head {
+  border-bottom: 1px solid #f0f0f0;
+  padding: 12px 16px;
+}
+
+.cross-check-widget .ant-card-head-title {
+  font-family: 'Cairo', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.cross-check-widget .ant-card-body {
+  padding: 16px;
+}
+
+.cross-check-widget .ant-statistic {
+  text-align: center;
+}
+
+.cross-check-widget .ant-statistic-title {
+  font-size: 12px;
+  color: #666;
+  font-family: 'Cairo', sans-serif;
+}
+
+.cross-check-widget .ant-statistic-content {
+  font-size: 18px;
+  font-weight: 600;
+  font-family: 'Cairo', sans-serif;
+}
+
+.cross-check-widget .ant-alert {
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+.cross-check-widget .ant-collapse {
+  border: none;
+  background: transparent;
+}
+
+.cross-check-widget .ant-collapse-header {
+  font-family: 'Cairo', sans-serif;
+  font-weight: 600;
+  color: #333;
+}
+
+.cross-check-widget .ant-list-item {
+  border-bottom: none;
+  padding: 4px 0;
+}
+
+.cross-check-widget .ant-list-item:last-child {
+  border-bottom: none;
+}
+
+.cross-check-widget .ant-typography h5 {
+  font-family: 'Cairo', sans-serif;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.cross-check-widget .ant-btn {
+  border-radius: 6px;
+  font-family: 'Cairo', sans-serif;
+  font-weight: 500;
+}
+
+.cross-check-widget .ant-btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+}
+
+.cross-check-widget .ant-btn-primary:hover {
+  background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+  transform: translateY(-1px);
+}
+
+.cross-check-widget .ant-badge {
+  font-size: 12px;
+}
+
+.cross-check-widget .ant-space {
+  gap: 8px;
+}
+
+.cross-check-widget .ant-modal-content {
+  border-radius: 12px;
+}
+
+.cross-check-widget .ant-modal-header {
+  border-radius: 12px 12px 0 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.cross-check-widget .ant-modal-title {
+  color: white;
+  font-weight: 600;
+  font-family: 'Cairo', sans-serif;
+}
+
+.cross-check-widget .ant-modal-close {
+  color: white;
+}
+
+.cross-check-widget .ant-modal-close:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.cross-check-widget .ant-progress {
+  margin-bottom: 16px;
+}
+
+.cross-check-widget .ant-progress-text {
+  font-weight: 600;
+  font-size: 14px;
+  font-family: 'Cairo', sans-serif;
+}
+
+.cross-check-widget pre {
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+/* تأثيرات حركية */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* تحسينات للشاشات الصغيرة */
+@media (max-width: 768px) {
+  .cross-check-widget .ant-card-body {
+    padding: 12px;
+  }
+  
+  .cross-check-widget .ant-statistic-content {
+    font-size: 16px;
+  }
+  
+  .cross-check-widget .ant-space {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .cross-check-widget .ant-space .ant-btn {
+    width: 100%;
+  }
+}
+
+/* تحسينات للوضع المظلم */
+@media (prefers-color-scheme: dark) {
+  .cross-check-widget {
+    background: #1f1f1f;
+    border-color: #303030;
+  }
+  
+  .cross-check-widget.success {
+    background: linear-gradient(135deg, #162312 0%, #1f1f1f 100%);
+  }
+  
+  .cross-check-widget.warning {
+    background: linear-gradient(135deg, #2b2111 0%, #1f1f1f 100%);
+  }
+  
+  .cross-check-widget.error {
+    background: linear-gradient(135deg, #2a1215 0%, #1f1f1f 100%);
+  }
+  
+  .cross-check-compact.success {
+    background: #162312;
+  }
+  
+  .cross-check-compact.warning {
+    background: #2b2111;
+  }
+  
+  .cross-check-compact.error {
+    background: #2a1215;
+  }
+}
+
+/* تحسين عرض الأيقونات */
+.cross-check-widget .anticon {
+  font-size: 16px;
+}
+
+.cross-check-widget .ant-statistic .anticon {
+  font-size: 18px;
+  margin-left: 6px;
+}
+
+/* تحسين عرض النصوص */
+.cross-check-widget .ant-typography {
+  font-family: 'Cairo', sans-serif;
+}
+
+.cross-check-widget .ant-typography h1,
+.cross-check-widget .ant-typography h2,
+.cross-check-widget .ant-typography h3,
+.cross-check-widget .ant-typography h4,
+.cross-check-widget .ant-typography h5 {
+  font-family: 'Cairo', sans-serif;
+  font-weight: 600;
+}
+
+/* تحسين عرض الأزرار */
+.cross-check-widget .ant-btn {
+  font-family: 'Cairo', sans-serif;
+  font-weight: 500;
+  height: 32px;
+  padding: 0 12px;
+}
+
+.cross-check-widget .ant-btn-sm {
+  height: 24px;
+  padding: 0 8px;
+  font-size: 12px;
+}
+
+/* تحسين عرض البطاقات */
+.cross-check-widget .ant-card {
+  font-family: 'Cairo', sans-serif;
+}
+
+.cross-check-widget .ant-card-head-title {
+  font-family: 'Cairo', sans-serif;
+  font-weight: 600;
+}
+
+/* تحسين عرض القوائم */
+.cross-check-widget .ant-list {
+  background: transparent;
+}
+
+.cross-check-widget .ant-list-item {
+  border-bottom: 1px solid #f0f0f0;
+  padding: 8px 0;
+}
+
+.cross-check-widget .ant-list-item:last-child {
+  border-bottom: none;
+}
+
+/* تحسين عرض التنبيهات */
+.cross-check-widget .ant-alert {
+  font-family: 'Cairo', sans-serif;
+}
+
+.cross-check-widget .ant-alert-message {
+  font-weight: 600;
+}
+
+.cross-check-widget .ant-alert-description {
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* تحسين عرض الإحصائيات السريعة */
+.cross-check-widget .quick-stats {
+  background: #f5f5f5;
+  border-radius: 6px;
+  padding: 8px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.cross-check-widget .quick-stats:hover {
+  background: #e8e8e8;
+  transform: translateY(-1px);
+}
+
+.cross-check-widget .quick-stats .stat-label {
+  font-size: 11px;
+  color: #666;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.cross-check-widget .quick-stats .stat-value {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* تحسين عرض التبويبات */
+.cross-check-widget .ant-tabs-tab {
+  font-family: 'Cairo', sans-serif;
+  font-weight: 500;
+  padding: 8px 12px;
+}
+
+.cross-check-widget .ant-tabs-tab-active {
+  font-weight: 600;
+}
+
+/* تحسين عرض الإحصائيات */
+.cross-check-widget .ant-statistic-title {
+  font-family: 'Cairo', sans-serif;
+  font-weight: 500;
+}
+
+.cross-check-widget .ant-statistic-content {
+  font-family: 'Cairo', sans-serif;
+  font-weight: 600;
+}
+
+/* تحسين عرض التنبيهات */
+.cross-check-widget .ant-alert {
+  font-family: 'Cairo', sans-serif;
+}
+
+.cross-check-widget .ant-alert-message {
+  font-weight: 600;
+}
+
+.cross-check-widget .ant-alert-description {
+  font-size: 13px;
+  line-height: 1.5;
+} 

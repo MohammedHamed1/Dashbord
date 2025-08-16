@@ -1,0 +1,387 @@
+/* Sidebar Styles */
+.sidebar {
+  background: #001529 !important;
+  border-right: 1px solid #303030;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: all 0.3s ease;
+}
+
+.sidebar.rtl {
+  border-right: none;
+  border-left: 1px solid #303030;
+}
+
+.sidebar .ant-menu {
+  background: transparent;
+  border-right: none;
+}
+
+.sidebar.rtl .ant-menu {
+  border-left: none;
+}
+
+.sidebar .ant-menu-item,
+.sidebar .ant-menu-submenu-title {
+  height: 48px;
+  line-height: 48px;
+  margin: 0;
+  padding: 0 16px !important;
+  color: #d9d9d9;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border-radius: 0;
+}
+
+.sidebar .ant-menu-item:hover,
+.sidebar .ant-menu-submenu-title:hover {
+  background: #1890ff !important;
+  color: #fff !important;
+}
+
+.sidebar .ant-menu-item-selected {
+  background: #1890ff !important;
+  color: #fff !important;
+  border-right: 3px solid #fff;
+}
+
+.sidebar.rtl .ant-menu-item-selected {
+  border-right: none;
+  border-left: 3px solid #fff;
+}
+
+.sidebar .ant-menu-item-selected::after {
+  display: none;
+}
+
+.sidebar .ant-menu-submenu-selected > .ant-menu-submenu-title {
+  color: #1890ff !important;
+}
+
+.sidebar .ant-menu-submenu-open > .ant-menu-submenu-title {
+  background: #1890ff !important;
+  color: #fff !important;
+}
+
+.sidebar .ant-menu-sub {
+  background: #000c17 !important;
+}
+
+.sidebar .ant-menu-sub .ant-menu-item {
+  padding-right: 48px !important;
+  height: 40px;
+  line-height: 40px;
+  font-size: 13px;
+}
+
+.sidebar.rtl .ant-menu-sub .ant-menu-item {
+  padding-right: 16px !important;
+  padding-left: 48px !important;
+}
+
+.sidebar .ant-menu-sub .ant-menu-item:hover {
+  background: #1890ff !important;
+  color: #fff !important;
+}
+
+.sidebar .ant-menu-sub .ant-menu-item-selected {
+  background: #1890ff !important;
+  color: #fff !important;
+}
+
+.sidebar .ant-menu-item-icon,
+.sidebar .ant-menu-submenu-title .anticon {
+  font-size: 16px;
+  margin-left: 12px;
+  margin-right: 0;
+}
+
+.sidebar.rtl .ant-menu-item-icon,
+.sidebar.rtl .ant-menu-submenu-title .anticon {
+  margin-left: 0;
+  margin-right: 12px;
+}
+
+.sidebar .ant-menu-submenu-arrow {
+  right: auto;
+  left: 16px;
+  color: #d9d9d9;
+}
+
+.sidebar.rtl .ant-menu-submenu-arrow {
+  right: 16px;
+  left: auto;
+}
+
+.sidebar .ant-menu-submenu-open .ant-menu-submenu-arrow {
+  color: #fff;
+}
+
+/* شعار التطبيق */
+.sidebar-header {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #002140;
+  border-bottom: 1px solid #303030;
+  padding: 0 16px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.logo-content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo-icon {
+  font-size: 24px;
+}
+
+.logo-text {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* قائمة الأدوار */
+.role-selector {
+  padding: 16px;
+  border-bottom: 1px solid #303030;
+}
+
+.role-button {
+  width: 100%;
+  color: #fff;
+  background: transparent;
+  border: 1px solid #303030;
+  text-align: center;
+}
+
+.role-button:hover {
+  background: #1890ff !important;
+  border-color: #1890ff !important;
+  color: #fff !important;
+}
+
+/* القائمة الرئيسية */
+.sidebar-menu {
+  background: transparent !important;
+  border: none !important;
+}
+
+.sidebar-menu .ant-menu-item {
+  margin: 0 !important;
+  border-radius: 0 !important;
+}
+
+.sidebar-menu .ant-menu-item:hover {
+  background: #1890ff !important;
+  color: #fff !important;
+}
+
+.sidebar-menu .ant-menu-item-selected {
+  background: #1890ff !important;
+  color: #fff !important;
+}
+
+.sidebar-menu .ant-menu-item .anticon {
+  font-size: 16px;
+}
+
+/* تذييل القائمة */
+.sidebar-footer {
+  padding: 16px;
+  border-top: 1px solid #303030;
+  margin-top: auto;
+}
+
+.language-toggle,
+.theme-toggle {
+  width: 100%;
+  color: #fff;
+  background: transparent;
+  border: 1px solid #303030;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.language-toggle:hover,
+.theme-toggle:hover {
+  background: #1890ff !important;
+  border-color: #1890ff !important;
+  color: #fff !important;
+}
+
+/* حالة الانهيار */
+.sidebar.collapsed {
+  width: 80px !important;
+}
+
+.sidebar.collapsed .logo-text {
+  display: none;
+}
+
+.sidebar.collapsed .role-selector {
+  padding: 8px;
+}
+
+.sidebar.collapsed .role-button {
+  padding: 0;
+  min-width: 40px;
+}
+
+.sidebar.collapsed .sidebar-footer {
+  padding: 8px;
+}
+
+.sidebar.collapsed .language-toggle,
+.sidebar.collapsed .theme-toggle {
+  padding: 0;
+  min-width: 40px;
+}
+
+/* الوضع الداكن */
+.dark-theme .sidebar {
+  background: #141414 !important;
+  border-right-color: #303030;
+}
+
+.dark-theme .sidebar.rtl {
+  border-left-color: #303030;
+}
+
+.dark-theme .sidebar-header {
+  background: #1f1f1f;
+  border-bottom-color: #303030;
+}
+
+.dark-theme .sidebar .ant-menu-sub {
+  background: #0a0a0a !important;
+}
+
+/* Scrollbar */
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: #001529;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: #1890ff;
+  border-radius: 3px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: #40a9ff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 1000;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+  
+  .sidebar.rtl {
+    left: auto;
+    right: 0;
+    transform: translateX(100%);
+  }
+  
+  .sidebar.mobile-open {
+    transform: translateX(0);
+  }
+  
+  .sidebar.collapsed {
+    width: 240px !important;
+  }
+  
+  .logo-text {
+    display: block !important;
+  }
+  
+  .role-selector {
+    display: block !important;
+  }
+  
+  .sidebar-footer {
+    display: block !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .sidebar .ant-menu-item,
+  .sidebar .ant-menu-submenu-title {
+    height: 44px;
+    line-height: 44px;
+    font-size: 13px;
+  }
+  
+  .sidebar-header {
+    height: 56px;
+  }
+  
+  .logo-text {
+    font-size: 14px;
+  }
+}
+
+/* RTL Specific Styles */
+[dir="rtl"] .sidebar {
+  border-right: none;
+  border-left: 1px solid #303030;
+}
+
+[dir="rtl"] .sidebar .ant-menu-item-icon,
+[dir="rtl"] .sidebar .ant-menu-submenu-title .anticon {
+  margin-left: 0;
+  margin-right: 12px;
+}
+
+[dir="rtl"] .sidebar .ant-menu-submenu-arrow {
+  right: 16px;
+  left: auto;
+}
+
+[dir="rtl"] .sidebar .ant-menu-item-selected {
+  border-right: none;
+  border-left: 3px solid #fff;
+}
+
+[dir="rtl"] .sidebar .ant-menu-sub .ant-menu-item {
+  padding-right: 16px !important;
+  padding-left: 48px !important;
+}
+
+/* App Layout RTL Support */
+.app-layout.rtl .ant-layout-sider {
+  right: 0;
+  left: auto;
+}
+
+.app-layout.rtl .ant-layout-content {
+  margin-right: 260px;
+  margin-left: 0;
+}
+
+.app-layout.rtl .ant-layout-sider-collapsed + .ant-layout .ant-layout-content {
+  margin-right: 80px;
+  margin-left: 0;
+} 

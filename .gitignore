@@ -1,0 +1,367 @@
+# ملف .gitignore لنظام إدارة مغاسل السيارات
+# نظام شامل ومتطور لإدارة مغاسل السيارات مع واجهة مستخدم عربية احترافية
+
+# تبعيات Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ملفات التثبيت
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# ملفات البناء
+build/
+dist/
+out/
+.next/
+.nuxt/
+.vuepress/dist
+.serverless/
+.fusebox/
+.dynamodb/
+
+# ملفات التطوير
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.staging.local
+
+# ملفات التكوين المحلية
+config/local.js
+config/local.json
+config/local.yaml
+config/local.yml
+
+# ملفات قاعدة البيانات
+*.db
+*.sqlite
+*.sqlite3
+db.json
+database.json
+*.sql
+*.bak
+*.backup
+
+# ملفات السجلات
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# ملفات التخزين المؤقت
+.cache/
+.parcel-cache/
+.eslintcache
+.stylelintcache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# ملفات IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ملفات الاختبار
+coverage/
+.nyc_output/
+.jest/
+*.lcov
+.coveralls.yml
+
+# ملفات التقرير
+reports/
+test-results/
+playwright-report/
+test-results.xml
+
+# ملفات التحميل
+uploads/
+public/uploads/
+static/uploads/
+media/
+public/media/
+static/media/
+
+# ملفات النسخ الاحتياطي
+backup/
+backups/
+*.backup
+*.bak
+*.old
+*.orig
+
+# ملفات مؤقتة
+temp/
+tmp/
+.tmp/
+.temp/
+*.tmp
+*.temp
+
+# ملفات الجلسات
+sessions/
+session/
+*.session
+
+# ملفات المفاتيح والأمان
+*.pem
+*.key
+*.crt
+*.csr
+*.p12
+*.pfx
+*.p8
+id_rsa
+id_rsa.pub
+*.env
+.secrets
+
+# ملفات التطبيق
+*.app
+*.exe
+*.dmg
+*.pkg
+*.deb
+*.rpm
+*.msi
+
+# ملفات الأرشيف
+*.zip
+*.tar.gz
+*.rar
+*.7z
+*.bz2
+
+# ملفات الوسائط
+*.mp4
+*.avi
+*.mov
+*.wmv
+*.flv
+*.webm
+*.mp3
+*.wav
+*.flac
+*.aac
+*.ogg
+
+# ملفات الصور الكبيرة
+*.psd
+*.ai
+*.eps
+*.svg
+*.ico
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.tiff
+*.webp
+
+# ملفات المستندات
+*.pdf
+*.doc
+*.docx
+*.xls
+*.xlsx
+*.ppt
+*.pptx
+*.odt
+*.ods
+*.odp
+
+# ملفات التطوير المحلية
+.local/
+local/
+dev/
+development/
+staging/
+test/
+
+# ملفات المراقبة
+monitoring/
+metrics/
+analytics/
+stats/
+
+# ملفات التكامل
+integrations/
+webhooks/
+api-keys/
+tokens/
+
+# ملفات التصدير
+exports/
+reports/
+*.csv
+*.xlsx
+*.json
+*.xml
+
+# ملفات الترجمة
+translations/
+locales/
+i18n/
+*.po
+*.mo
+
+# ملفات التخصيص
+custom/
+themes/
+plugins/
+extensions/
+
+# ملفات الأداء
+performance/
+benchmarks/
+profiles/
+*.prof
+
+# ملفات الأمان
+security/
+firewall/
+*.firewall
+*.security
+
+# ملفات النسخ الاحتياطي التلقائية
+auto-backup/
+scheduled-backups/
+daily-backups/
+weekly-backups/
+monthly-backups/
+
+# ملفات التحديثات
+updates/
+patches/
+hotfixes/
+*.patch
+*.diff
+
+# ملفات التكوين المخصصة
+custom-config/
+user-config/
+personal-config/
+*.config.local
+*.config.user
+
+# ملفات البيانات المؤقتة
+data-temp/
+temp-data/
+cache-data/
+*.cache
+*.tmp
+
+# ملفات المراقبة والتحليل
+monitoring-data/
+analytics-data/
+tracking-data/
+*.analytics
+*.tracking
+
+# ملفات التطوير التجريبي
+experimental/
+beta/
+alpha/
+preview/
+demo/
+
+# ملفات التوثيق المخصصة
+docs-local/
+documentation-local/
+*.doc.local
+*.md.local
+
+# ملفات الاختبار المخصصة
+tests-local/
+test-data/
+test-files/
+*.test.local
+*.spec.local
+
+# ملفات التطوير المخصصة
+dev-files/
+development-files/
+*.dev
+*.development
+
+# ملفات الإنتاج المخصصة
+prod-files/
+production-files/
+*.prod
+*.production
+
+# ملفات التطوير المحلي
+local-development/
+local-dev/
+*.local.dev
+*.local.development
+
+# ملفات الاختبار المحلي
+local-testing/
+local-tests/
+*.local.test
+*.local.testing
+
+# ملفات الإنتاج المحلي
+local-production/
+local-prod/
+*.local.prod
+*.local.production
+
+# معلومات إضافية
+# الموقع: https://carlaundry.com
+# اللغة: العربية
+# الاتجاه: RTL (من اليمين لليسار)
+# المنطقة: الشرق الأوسط
+# البلد: المملكة العربية السعودية
+
+# إعدادات الأمان
+# منع رفع الملفات الحساسة
+# حماية معلومات المستخدمين
+# حماية بيانات النظام
+# حماية مفاتيح API
+
+# إعدادات الأداء
+# تجاهل ملفات التخزين المؤقت
+# تجاهل ملفات البناء
+# تجاهل ملفات التطوير
+# تجاهل ملفات الاختبار
+
+# إعدادات التطوير
+# تجاهل ملفات IDE
+# تجاهل ملفات النظام
+# تجاهل ملفات مؤقتة
+# تجاهل ملفات النسخ الاحتياطي
+
+# معلومات الاتصال
+# البريد الإلكتروني: support@carlaundry.com
+# الهاتف: +966-50-123-4567
+# الموقع الإلكتروني: https://carlaundry.com
+# الدعم الفني: متاح 24/7
+
+# حقوق النشر
+# جميع الحقوق محفوظة © 2025 نظام إدارة مغاسل السيارات
+# الترخيص: MIT
+# المطور: فريق تطوير نظام إدارة مغاسل السيارات 

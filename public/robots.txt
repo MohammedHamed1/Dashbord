@@ -1,0 +1,139 @@
+# ملف robots.txt لنظام إدارة مغاسل السيارات
+# نظام شامل ومتطور لإدارة مغاسل السيارات مع واجهة مستخدم عربية احترافية
+
+# User-agent: *
+# Allow: /
+
+# منع الوصول لملفات النظام
+User-agent: *
+Disallow: /api/
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /logs/
+Disallow: /config/
+Disallow: /backup/
+Disallow: /uploads/
+Disallow: /cache/
+Disallow: /sessions/
+Disallow: /.git/
+Disallow: /.env
+Disallow: /package.json
+Disallow: /package-lock.json
+Disallow: /node_modules/
+Disallow: /src/
+Disallow: /build/
+Disallow: /dist/
+
+# السماح بالوصول للصفحات العامة
+User-agent: *
+Allow: /
+Allow: /dashboard
+Allow: /about
+Allow: /contact
+Allow: /help
+Allow: /faq
+Allow: /privacy
+Allow: /terms
+Allow: /features
+Allow: /pricing
+
+# السماح بالوصول للموارد الثابتة
+User-agent: *
+Allow: /static/
+Allow: /images/
+Allow: /icons/
+Allow: /fonts/
+Allow: /css/
+Allow: /js/
+Allow: /assets/
+
+# إعدادات خاصة لمحركات البحث
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1
+
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 2
+
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 1
+
+# منع الوصول للملفات الحساسة
+User-agent: *
+Disallow: /*.json$
+Disallow: /*.xml$
+Disallow: /*.txt$
+Disallow: /*.log$
+Disallow: /*.sql$
+Disallow: /*.bak$
+Disallow: /*.tmp$
+Disallow: /*.temp$
+
+# منع الوصول لملفات التطوير
+User-agent: *
+Disallow: /dev/
+Disallow: /test/
+Disallow: /staging/
+Disallow: /debug/
+Disallow: /console/
+
+# إعدادات Sitemap
+Sitemap: https://carlaundry.com/sitemap.xml
+Sitemap: https://carlaundry.com/sitemap-arabic.xml
+
+# معلومات إضافية
+# الموقع: https://carlaundry.com
+# اللغة: العربية
+# الاتجاه: RTL (من اليمين لليسار)
+# المنطقة: الشرق الأوسط
+# البلد: المملكة العربية السعودية
+
+# إعدادات الأداء
+# تأخير الزحف: 1 ثانية
+# معدل الطلبات: 1 طلب في الثانية
+# عمق الزحف: غير محدود
+# أولوية الصفحات: عالية
+
+# إعدادات الأمان
+# منع الوصول للملفات الحساسة
+# حماية من هجمات الزحف المكثف
+# مراقبة نشاط محركات البحث
+# تسجيل محاولات الوصول المحظورة
+
+# إعدادات SEO
+# تحسين لمحركات البحث العربية
+# دعم اللغة العربية والـ RTL
+# تحسين سرعة التحميل
+# تحسين تجربة المستخدم
+
+# إعدادات التطبيق
+# نوع التطبيق: نظام إدارة مغاسل السيارات
+# الواجهة: عربية احترافية
+# المميزات: شاملة ومتطورة
+# الجمهور المستهدف: أصحاب مغاسل السيارات
+
+# معلومات الاتصال
+# البريد الإلكتروني: support@carlaundry.com
+# الهاتف: +966-50-123-4567
+# الموقع الإلكتروني: https://carlaundry.com
+# الدعم الفني: متاح 24/7
+
+# حقوق النشر
+# جميع الحقوق محفوظة © 2025 نظام إدارة مغاسل السيارات
+# الترخيص: MIT
+# المطور: فريق تطوير نظام إدارة مغاسل السيارات

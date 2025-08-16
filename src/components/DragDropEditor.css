@@ -1,0 +1,514 @@
+/* Drag Drop Editor Styles */
+.drag-drop-editor {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 20px;
+  min-height: 600px;
+}
+
+/* Editor Toolbar */
+.editor-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 16px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  border: 1px solid #e8e8e8;
+}
+
+.editor-toolbar .ant-space {
+  flex-wrap: wrap;
+}
+
+.editor-toolbar .ant-btn {
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.editor-toolbar .ant-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Drag Drop Area */
+.drag-drop-area {
+  min-height: 400px;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 2px dashed #e8e8e8;
+  transition: all 0.3s ease;
+}
+
+.drag-drop-area:hover {
+  border-color: #1890ff;
+  background: #fafafa;
+}
+
+/* Drag Item */
+.drag-item {
+  margin-bottom: 12px;
+  transition: all 0.3s ease;
+}
+
+.drag-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.drag-item.dragging {
+  transform: rotate(5deg);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+/* Item Card */
+.item-card {
+  border-radius: 8px;
+  border: 1px solid #e8e8e8;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.item-card:hover {
+  border-color: #1890ff;
+  box-shadow: 0 4px 16px rgba(24, 144, 255, 0.1);
+}
+
+.item-card .ant-card-head {
+  background: #fafafa;
+  border-bottom: 1px solid #e8e8e8;
+  border-radius: 8px 8px 0 0;
+}
+
+.item-card .ant-card-head-title {
+  font-weight: 600;
+  color: #262626;
+}
+
+.item-card .ant-card-body {
+  padding: 16px;
+}
+
+/* Item Content */
+.item-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 40px;
+}
+
+.item-content img {
+  border-radius: 6px;
+  border: 1px solid #e8e8e8;
+}
+
+.item-content .ant-typography {
+  margin: 0;
+}
+
+/* Action Buttons */
+.item-card .ant-space .anticon {
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  color: #8c8c8c;
+}
+
+.item-card .ant-space .anticon:hover {
+  background: #f0f0f0;
+  color: #1890ff;
+}
+
+.item-card .ant-space .anticon-drag {
+  cursor: grab;
+  color: #bfbfbf;
+}
+
+.item-card .ant-space .anticon-drag:hover {
+  color: #1890ff;
+}
+
+.item-card .ant-space .anticon-delete:hover {
+  color: #ff4d4f;
+  background: #fff1f0;
+}
+
+/* Badge Styles */
+.item-card .ant-badge-status-dot {
+  width: 8px;
+  height: 8px;
+}
+
+.item-card .ant-badge-status-text {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* Preview Container */
+.preview-container {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.preview-desktop {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.preview-tablet {
+  max-width: 768px;
+  margin: 0 auto;
+  border: 8px solid #333;
+  border-radius: 12px;
+}
+
+.preview-mobile {
+  max-width: 375px;
+  margin: 0 auto;
+  border: 8px solid #333;
+  border-radius: 20px;
+}
+
+/* Version History */
+.version-history {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.version-history .ant-card {
+  border: 1px solid #e8e8e8;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+.version-history .ant-card:hover {
+  border-color: #1890ff;
+  box-shadow: 0 2px 8px rgba(24, 144, 255, 0.1);
+}
+
+/* Form Styles */
+.drag-drop-editor .ant-form-item-label > label {
+  font-weight: 500;
+  color: #262626;
+}
+
+.drag-drop-editor .ant-input,
+.drag-drop-editor .ant-textarea,
+.drag-drop-editor .ant-select-selector {
+  border-radius: 6px;
+  border: 1px solid #d9d9d9;
+  transition: all 0.3s ease;
+}
+
+.drag-drop-editor .ant-input:focus,
+.drag-drop-editor .ant-textarea:focus,
+.drag-drop-editor .ant-select-focused .ant-select-selector {
+  border-color: #1890ff;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+
+/* Upload Styles */
+.drag-drop-editor .ant-upload {
+  border: 2px dashed #d9d9d9;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.drag-drop-editor .ant-upload:hover {
+  border-color: #1890ff;
+}
+
+/* Switch Styles */
+.drag-drop-editor .ant-switch {
+  background: #bfbfbf;
+}
+
+.drag-drop-editor .ant-switch-checked {
+  background: #1890ff;
+}
+
+/* Modal Styles */
+.drag-drop-editor .ant-modal-header {
+  background: #fafafa;
+  border-bottom: 1px solid #e8e8e8;
+  border-radius: 8px 8px 0 0;
+}
+
+.drag-drop-editor .ant-modal-title {
+  font-weight: 600;
+  color: #262626;
+}
+
+.drag-drop-editor .ant-modal-content {
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+/* Tabs Styles */
+.drag-drop-editor .ant-tabs-tab {
+  font-weight: 500;
+  color: #8c8c8c;
+  transition: all 0.3s ease;
+}
+
+.drag-drop-editor .ant-tabs-tab:hover {
+  color: #1890ff;
+}
+
+.drag-drop-editor .ant-tabs-tab-active {
+  color: #1890ff;
+}
+
+.drag-drop-editor .ant-tabs-ink-bar {
+  background: #1890ff;
+  height: 3px;
+  border-radius: 2px;
+}
+
+/* Color Picker */
+.drag-drop-editor .ant-color-picker {
+  border-radius: 6px;
+}
+
+/* Slider */
+.drag-drop-editor .ant-slider {
+  margin: 8px 0;
+}
+
+.drag-drop-editor .ant-slider-track {
+  background: #1890ff;
+}
+
+.drag-drop-editor .ant-slider-handle {
+  border: 2px solid #1890ff;
+  box-shadow: 0 2px 8px rgba(24, 144, 255, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .drag-drop-editor {
+    padding: 12px;
+  }
+  
+  .editor-toolbar {
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+  }
+  
+  .editor-toolbar .ant-space {
+    justify-content: center;
+  }
+  
+  .drag-drop-area {
+    padding: 12px;
+  }
+  
+  .item-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .preview-container {
+    padding: 12px;
+  }
+}
+
+/* Dark Theme Support */
+.dark-theme .drag-drop-editor {
+  background: #1f1f1f;
+}
+
+.dark-theme .editor-toolbar {
+  background: #262626;
+  border-color: #434343;
+}
+
+.dark-theme .drag-drop-area {
+  background: #262626;
+  border-color: #434343;
+}
+
+.dark-theme .drag-drop-area:hover {
+  border-color: #1890ff;
+  background: #1f1f1f;
+}
+
+.dark-theme .item-card {
+  background: #262626;
+  border-color: #434343;
+}
+
+.dark-theme .item-card:hover {
+  border-color: #1890ff;
+  box-shadow: 0 4px 16px rgba(24, 144, 255, 0.2);
+}
+
+.dark-theme .item-card .ant-card-head {
+  background: #1f1f1f;
+  border-bottom-color: #434343;
+}
+
+.dark-theme .item-card .ant-card-head-title {
+  color: #f0f0f0;
+}
+
+.dark-theme .item-content .ant-typography {
+  color: #f0f0f0;
+}
+
+.dark-theme .item-content .ant-typography.ant-typography-secondary {
+  color: #a6a6a6;
+}
+
+.dark-theme .preview-container {
+  background: #262626;
+}
+
+/* Animation Classes */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.drag-item {
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.drag-item.dragging {
+  animation: pulse 0.6s ease infinite;
+}
+
+/* Loading States */
+.drag-drop-editor.loading {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.drag-drop-editor.loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  margin: -20px 0 0 -20px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #1890ff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Custom Scrollbar */
+.drag-drop-editor ::-webkit-scrollbar {
+  width: 8px;
+}
+
+.drag-drop-editor ::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.drag-drop-editor ::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+.drag-drop-editor ::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Focus States */
+.drag-drop-editor .ant-btn:focus,
+.drag-drop-editor .ant-input:focus,
+.drag-drop-editor .ant-textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+
+/* Success/Error States */
+.drag-drop-editor .success {
+  border-color: #52c41a;
+  box-shadow: 0 0 0 2px rgba(82, 196, 26, 0.2);
+}
+
+.drag-drop-editor .error {
+  border-color: #ff4d4f;
+  box-shadow: 0 0 0 2px rgba(255, 77, 79, 0.2);
+}
+
+/* Tooltip Enhancements */
+.drag-drop-editor .ant-tooltip {
+  font-size: 12px;
+}
+
+.drag-drop-editor .ant-tooltip-inner {
+  background: #262626;
+  border-radius: 6px;
+  padding: 8px 12px;
+}
+
+/* Popconfirm Enhancements */
+.drag-drop-editor .ant-popover-inner {
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.drag-drop-editor .ant-popover-title {
+  font-weight: 600;
+  color: #262626;
+}
+
+/* Empty State */
+.drag-drop-area:empty::before {
+  content: 'اسحب وأفلت العناصر هنا لإضافة محتوى جديد';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  color: #8c8c8c;
+  font-size: 16px;
+  text-align: center;
+  border: 2px dashed #d9d9d9;
+  border-radius: 8px;
+  background: #fafafa;
+}
+
+.dark-theme .drag-drop-area:empty::before {
+  color: #a6a6a6;
+  border-color: #434343;
+  background: #1f1f1f;
+} 

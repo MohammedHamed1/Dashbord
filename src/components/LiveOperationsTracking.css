@@ -1,0 +1,251 @@
+.live-operations-tracking {
+  width: 100%;
+}
+
+.tracking-card {
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.operation-item {
+  padding: 16px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  background: white;
+  border: 1px solid #f0f0f0;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.operation-item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+  border-color: #1890ff;
+}
+
+.operation-item[data-status="processing"] {
+  border-left: 4px solid #1890ff;
+  background: linear-gradient(135deg, #f0f8ff 0%, #ffffff 100%);
+}
+
+.operation-item[data-status="pending"] {
+  border-left: 4px solid #faad14;
+  background: linear-gradient(135deg, #fff7e6 0%, #ffffff 100%);
+}
+
+.operation-item[data-status="completed"] {
+  border-left: 4px solid #52c41a;
+  background: linear-gradient(135deg, #f6ffed 0%, #ffffff 100%);
+}
+
+.operation-item[data-status="cancelled"] {
+  border-left: 4px solid #ff4d4f;
+  background: linear-gradient(135deg, #fff2f0 0%, #ffffff 100%);
+}
+
+.operation-progress {
+  min-width: 200px;
+  text-align: center;
+}
+
+.operation-actions {
+  min-width: 150px;
+  text-align: center;
+}
+
+/* تأثيرات حركية للتقدم */
+.ant-progress-bg {
+  transition: width 0.5s ease-in-out;
+}
+
+/* تأثيرات للعمليات الجارية */
+.operation-item[data-status="processing"] .ant-progress-bg {
+  background: linear-gradient(90deg, #1890ff 0%, #40a9ff 100%);
+  animation: progressPulse 2s infinite;
+}
+
+@keyframes progressPulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* تحسينات للقائمة */
+.ant-list-item-meta-title {
+  margin-bottom: 8px !important;
+}
+
+.ant-list-item-meta-description {
+  line-height: 1.6;
+}
+
+/* تأثيرات للأزرار */
+.operation-actions .ant-btn {
+  transition: all 0.3s ease;
+}
+
+.operation-actions .ant-btn:hover {
+  transform: scale(1.05);
+}
+
+.operation-actions .ant-btn-primary {
+  box-shadow: 0 2px 8px rgba(24, 144, 255, 0.3);
+}
+
+.operation-actions .ant-btn-primary:hover {
+  box-shadow: 0 4px 12px rgba(24, 144, 255, 0.4);
+}
+
+/* تحسينات للتصميم المتجاوب */
+@media (max-width: 768px) {
+  .operation-item {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .operation-progress {
+    min-width: auto;
+    width: 100%;
+  }
+  
+  .operation-actions {
+    min-width: auto;
+    width: 100%;
+  }
+  
+  .operation-actions .ant-space {
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+/* تأثيرات للوضع الداكن */
+[data-theme="dark"] .operation-item {
+  background: #1f1f1f;
+  border-color: #333;
+}
+
+[data-theme="dark"] .operation-item:hover {
+  background: #2a2a2a;
+  border-color: #1890ff;
+}
+
+[data-theme="dark"] .operation-item[data-status="processing"] {
+  background: linear-gradient(135deg, #1a1a2e 0%, #1f1f1f 100%);
+}
+
+[data-theme="dark"] .operation-item[data-status="pending"] {
+  background: linear-gradient(135deg, #2e1a1a 0%, #1f1f1f 100%);
+}
+
+[data-theme="dark"] .operation-item[data-status="completed"] {
+  background: linear-gradient(135deg, #1a2e1a 0%, #1f1f1f 100%);
+}
+
+[data-theme="dark"] .operation-item[data-status="cancelled"] {
+  background: linear-gradient(135deg, #2e1a1a 0%, #1f1f1f 100%);
+}
+
+/* تحسينات للخط الزمني */
+.ant-timeline-item-content {
+  padding: 8px 0;
+}
+
+.ant-timeline-item-dot {
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+}
+
+/* تأثيرات للعلامات */
+.ant-tag {
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+/* تحسينات للوصف */
+.ant-descriptions-item-label {
+  font-weight: 600;
+  color: #666;
+}
+
+.ant-descriptions-item-content {
+  font-weight: 500;
+}
+
+/* تأثيرات للقوائم */
+.ant-list-item {
+  border-radius: 8px;
+  margin-bottom: 8px;
+  transition: all 0.3s ease;
+}
+
+.ant-list-item:hover {
+  background-color: #fafafa;
+}
+
+[data-theme="dark"] .ant-list-item:hover {
+  background-color: #2a2a2a;
+}
+
+/* تحسينات للبطاقات */
+.tracking-card .ant-card-head {
+  border-bottom: 2px solid #f0f0f0;
+  background: linear-gradient(135deg, #fafafa 0%, #ffffff 100%);
+}
+
+[data-theme="dark"] .tracking-card .ant-card-head {
+  background: linear-gradient(135deg, #2a2a2a 0%, #1f1f1f 100%);
+  border-bottom-color: #333;
+}
+
+/* تأثيرات للرسوم المتحركة */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.operation-item {
+  animation: slideIn 0.5s ease-out;
+}
+
+/* تحسينات للأداء */
+.operation-item * {
+  will-change: transform;
+}
+
+/* تأثيرات للتفاعل */
+.operation-item:active {
+  transform: scale(0.98);
+}
+
+/* تحسينات للوصول */
+.operation-item:focus-within {
+  outline: 2px solid #1890ff;
+  outline-offset: 2px;
+}
+
+/* تحسينات للطباعة */
+@media print {
+  .operation-actions {
+    display: none;
+  }
+  
+  .operation-item {
+    break-inside: avoid;
+    border: 1px solid #ccc;
+  }
+} 

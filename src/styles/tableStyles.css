@@ -1,0 +1,434 @@
+/* تحسينات عامة للجداول */
+.ant-table {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ant-table-thead > tr > th {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-weight: 600;
+  text-align: center;
+  border: none;
+  padding: 16px 12px;
+}
+
+.ant-table-tbody > tr > td {
+  padding: 12px;
+  border-bottom: 1px solid #f0f0f0;
+  text-align: center;
+}
+
+.ant-table-tbody > tr:hover > td {
+  background-color: #f5f5f5;
+}
+
+/* تحسين عرض النصوص العربية */
+.ant-table-cell {
+  font-family: 'Cairo', sans-serif;
+  direction: rtl;
+  text-align: right;
+}
+
+/* تحسين عرض الأيقونات */
+.ant-table-cell .anticon {
+  direction: ltr;
+  margin-left: 4px;
+}
+
+/* تحسين عرض التاج */
+.ant-tag {
+  border-radius: 6px;
+  font-weight: 500;
+  padding: 4px 8px;
+}
+
+/* تحسين عرض الأفاتار */
+.ant-avatar {
+  border: 2px solid #f0f0f0;
+}
+
+/* تحسين عرض الأزرار */
+.ant-btn {
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+/* تحسين عرض النصوص الطويلة */
+.text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 200px;
+}
+
+/* تحسين عرض التواريخ */
+.date-cell {
+  font-family: 'Cairo', sans-serif;
+  direction: rtl;
+  text-align: center;
+}
+
+/* تحسين عرض الأرقام */
+.number-cell {
+  font-family: 'Cairo', sans-serif;
+  direction: ltr;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* تحسين عرض الحالات */
+.status-cell {
+  text-align: center;
+}
+
+/* تحسين عرض الإجراءات */
+.actions-cell {
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* تحسين عرض العميل */
+.customer-cell {
+  text-align: right;
+  min-width: 150px;
+}
+
+/* تحسين عرض السيارة */
+.car-cell {
+  text-align: right;
+  min-width: 120px;
+}
+
+/* تحسين عرض التقييم */
+.rating-cell {
+  text-align: center;
+  direction: ltr;
+}
+
+/* تحسين عرض المبلغ */
+.amount-cell {
+  text-align: center;
+  direction: ltr;
+  font-weight: 600;
+  color: #52c41a;
+}
+
+/* تحسين عرض القناة */
+.channel-cell {
+  text-align: center;
+}
+
+/* تحسين عرض المنصة */
+.platform-cell {
+  text-align: center;
+}
+
+/* تحسين عرض الأولوية */
+.priority-cell {
+  text-align: center;
+}
+
+/* تحسين عرض الجداول في الشاشات الصغيرة */
+@media (max-width: 768px) {
+  .ant-table {
+    font-size: 12px;
+  }
+  
+  .ant-table-thead > tr > th,
+  .ant-table-tbody > tr > td {
+    padding: 8px 4px;
+  }
+  
+  .text-ellipsis {
+    max-width: 100px;
+  }
+  
+  .customer-cell {
+    min-width: 100px;
+  }
+  
+  .car-cell {
+    min-width: 80px;
+  }
+}
+
+/* تحسين عرض الجداول في الشاشات المتوسطة */
+@media (max-width: 1024px) {
+  .ant-table {
+    font-size: 13px;
+  }
+  
+  .text-ellipsis {
+    max-width: 150px;
+  }
+}
+
+/* تحسين عرض الجداول في الوضع الداكن */
+[data-theme="dark"] .ant-table {
+  background: #1f1f1f;
+  color: white;
+}
+
+[data-theme="dark"] .ant-table-thead > tr > th {
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  color: white;
+}
+
+[data-theme="dark"] .ant-table-tbody > tr > td {
+  border-bottom: 1px solid #333;
+}
+
+[data-theme="dark"] .ant-table-tbody > tr:hover > td {
+  background-color: #2a2a2a;
+}
+
+/* تحسين عرض الصفوف الفردية والزوجية */
+.ant-table-tbody > tr:nth-child(even) > td {
+  background-color: #fafafa;
+}
+
+[data-theme="dark"] .ant-table-tbody > tr:nth-child(even) > td {
+  background-color: #262626;
+}
+
+/* تحسين عرض الصف المحدد */
+.ant-table-tbody > tr.ant-table-row-selected > td {
+  background-color: #e6f7ff;
+}
+
+[data-theme="dark"] .ant-table-tbody > tr.ant-table-row-selected > td {
+  background-color: #1a3a4a;
+}
+
+/* تحسين عرض التحميل */
+.ant-table-loading {
+  opacity: 0.7;
+}
+
+/* تحسين عرض الصفحات */
+.ant-pagination {
+  text-align: center;
+  margin-top: 16px;
+}
+
+.ant-pagination-item {
+  border-radius: 6px;
+}
+
+.ant-pagination-item-active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-color: #667eea;
+}
+
+/* تحسين عرض البحث */
+.ant-input-search {
+  margin-bottom: 16px;
+}
+
+.ant-input-search .ant-input {
+  border-radius: 6px;
+}
+
+/* تحسين عرض الفلاتر */
+.ant-table-filter-dropdown {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* تحسين عرض التلميحات */
+.ant-tooltip {
+  font-family: 'Cairo', sans-serif;
+}
+
+/* تحسين عرض النوافذ المنبثقة */
+.ant-modal {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.ant-modal-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.ant-modal-title {
+  color: white;
+  font-weight: 600;
+}
+
+/* تحسين عرض الأوصاف */
+.ant-descriptions {
+  background: white;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ant-descriptions-item-label {
+  font-weight: 600;
+  color: #666;
+}
+
+.ant-descriptions-item-content {
+  color: #333;
+}
+
+/* تحسين عرض القوائم */
+.ant-list {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ant-list-item {
+  padding: 16px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.ant-list-item:last-child {
+  border-bottom: none;
+}
+
+/* تحسين عرض البطاقات */
+.ant-card {
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.ant-card-head {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.ant-card-head-title {
+  color: white;
+  font-weight: 600;
+}
+
+/* تحسين عرض الإحصائيات */
+.ant-statistic {
+  text-align: center;
+}
+
+.ant-statistic-title {
+  color: #666;
+  font-size: 14px;
+}
+
+.ant-statistic-content {
+  color: #333;
+  font-weight: 600;
+}
+
+/* تحسين عرض الرسوم البيانية */
+.chart-container {
+  background: white;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* تحسين عرض النماذج */
+.ant-form {
+  background: white;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ant-form-item-label > label {
+  font-weight: 600;
+  color: #666;
+}
+
+/* تحسين عرض الأزرار */
+.ant-btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.ant-btn-primary:hover {
+  background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+/* تحسين عرض الأيقونات */
+.anticon {
+  vertical-align: middle;
+}
+
+/* تحسين عرض النصوص */
+.ant-typography {
+  font-family: 'Cairo', sans-serif;
+}
+
+/* تحسين عرض المسافات */
+.ant-space {
+  gap: 8px;
+}
+
+/* تحسين عرض التقسيمات */
+.ant-divider {
+  margin: 16px 0;
+}
+
+/* تحسين عرض التبويبات */
+.ant-tabs-tab {
+  border-radius: 6px 6px 0 0;
+}
+
+.ant-tabs-tab-active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+/* تحسين عرض القوائم المنسدلة */
+.ant-dropdown-menu {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.ant-dropdown-menu-item {
+  padding: 8px 16px;
+}
+
+.ant-dropdown-menu-item:hover {
+  background-color: #f5f5f5;
+}
+
+/* تحسين عرض النوافذ المنبثقة للتفاصيل */
+.details-modal .ant-modal-body {
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+/* تحسين عرض الجداول في النوافذ المنبثقة */
+.details-modal .ant-table {
+  box-shadow: none;
+  border: 1px solid #f0f0f0;
+}
+
+/* تحسين عرض الرسائل */
+.ant-message {
+  font-family: 'Cairo', sans-serif;
+}
+
+.ant-message-notice {
+  border-radius: 8px;
+}
+
+/* تحسين عرض الإشعارات */
+.ant-notification {
+  font-family: 'Cairo', sans-serif;
+}
+
+.ant-notification-notice {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+} 

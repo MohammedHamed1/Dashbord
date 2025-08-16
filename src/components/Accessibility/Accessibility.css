@@ -1,0 +1,237 @@
+/* إعدادات الوصولية */
+
+/* التباين العالي */
+.high-contrast {
+  --primary-color: #000000;
+  --secondary-color: #ffffff;
+  --text-color: #000000;
+  --background-color: #ffffff;
+  --border-color: #000000;
+  --shadow-color: rgba(0, 0, 0, 0.5);
+}
+
+.high-contrast * {
+  color: var(--text-color) !important;
+  background-color: var(--background-color) !important;
+  border-color: var(--border-color) !important;
+}
+
+/* أحجام الخط */
+.font-small {
+  font-size: 0.875rem;
+}
+
+.font-medium {
+  font-size: 1rem;
+}
+
+.font-large {
+  font-size: 1.125rem;
+}
+
+/* تقليل الحركة */
+.reduced-motion * {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+}
+
+/* مؤشر التركيز المرئي */
+.focus-visible *:focus {
+  outline: 3px solid #1890ff !important;
+  outline-offset: 2px !important;
+}
+
+/* تحسينات إضافية للوصولية */
+[role="button"],
+[role="link"],
+[role="menuitem"] {
+  cursor: pointer;
+}
+
+[aria-hidden="true"] {
+  display: none !important;
+}
+
+/* دعم قارئات الشاشة */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* تحسين التباين للألوان */
+.ant-btn-primary {
+  background-color: #1890ff;
+  border-color: #1890ff;
+  color: #ffffff;
+}
+
+.ant-btn-primary:hover {
+  background-color: #40a9ff;
+  border-color: #40a9ff;
+}
+
+/* تحسين أحجام الأزرار للوصولية */
+.ant-btn {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* تحسين أحجام الروابط */
+a {
+  min-height: 44px;
+  min-width: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* تحسين أحجام حقول الإدخال */
+.ant-input,
+.ant-select-selector {
+  min-height: 44px;
+}
+
+/* تحسين أحجام القوائم */
+.ant-menu-item {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+
+/* تحسين أحجام البطاقات */
+.ant-card {
+  min-height: 44px;
+}
+
+/* تحسين أحجام الجداول */
+.ant-table-cell {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+
+/* تحسين أحجام الأيقونات */
+.anticon {
+  min-width: 24px;
+  min-height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* تحسين أحجام الصور */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* تحسين أحجام الفيديوهات */
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* تحسين أحجام الرسوم البيانية */
+.recharts-wrapper {
+  min-height: 200px;
+}
+
+/* تحسين أحجام الخرائط */
+.map-container {
+  min-height: 300px;
+}
+
+/* تحسين أحجام النماذج */
+.ant-form-item {
+  margin-bottom: 24px;
+}
+
+/* تحسين أحجام التنبيهات */
+.ant-alert {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+
+/* تحسين أحجام الرسائل */
+.ant-message {
+  min-height: 44px;
+}
+
+/* تحسين أحجام الإشعارات */
+.ant-notification {
+  min-height: 44px;
+}
+
+/* تحسين أحجام النوافذ المنبثقة */
+.ant-modal {
+  min-width: 300px;
+}
+
+/* تحسين أحجام القوائم المنسدلة */
+.ant-dropdown-menu {
+  min-width: 200px;
+}
+
+/* تحسين أحجام شريط التمرير */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* تحسين أحجام شريط التمرير للتباين العالي */
+.high-contrast ::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+.high-contrast ::-webkit-scrollbar-thumb {
+  background: #000000;
+}
+
+.high-contrast ::-webkit-scrollbar-thumb:hover {
+  background: #333333;
+}
+
+/* تحسين أحجام شريط التمرير للخط الكبير */
+.font-large ::-webkit-scrollbar {
+  width: 16px;
+  height: 16px;
+}
+
+/* تحسين أحجام شريط التمرير للخط الصغير */
+.font-small ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+/* تحسين أحجام شريط التمرير لتقليل الحركة */
+.reduced-motion ::-webkit-scrollbar-thumb {
+  transition: none;
+}
+
+/* تحسين أحجام شريط التمرير لمؤشر التركيز */
+.focus-visible ::-webkit-scrollbar-thumb:focus {
+  outline: 2px solid #1890ff;
+  outline-offset: 2px;
+} 

@@ -1,0 +1,317 @@
+/* Import Cairo Font */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap');
+
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background: #f7f8fa;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Cairo', sans-serif !important;
+  line-height: 1.6;
+  color: #333;
+  background: #f7f8fa;
+  transition: all 0.3s ease;
+}
+
+/* RTL/LTR Support */
+body.rtl {
+  direction: rtl;
+  text-align: right;
+}
+
+body.ltr {
+  direction: ltr;
+  text-align: left;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cairo', sans-serif;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 0.5em;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.75rem; }
+h4 { font-size: 1.5rem; }
+h5 { font-size: 1.25rem; }
+h6 { font-size: 1rem; }
+
+/* RTL Typography Adjustments */
+body.rtl h1, body.rtl h2, body.rtl h3, body.rtl h4, body.rtl h5, body.rtl h6 {
+  text-align: right;
+}
+
+body.ltr h1, body.ltr h2, body.ltr h3, body.ltr h4, body.ltr h5, body.ltr h6 {
+  text-align: left;
+}
+
+/* Links */
+a {
+  color: #1890ff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #40a9ff;
+  text-decoration: underline;
+}
+
+/* Buttons */
+button {
+  font-family: 'Cairo', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Form Elements */
+input, textarea, select {
+  font-family: 'Cairo', sans-serif;
+  direction: inherit;
+}
+
+/* RTL Form Adjustments */
+body.rtl input,
+body.rtl textarea,
+body.rtl select {
+  text-align: right;
+}
+
+body.ltr input,
+body.ltr textarea,
+body.ltr select {
+  text-align: left;
+}
+
+/* Layout Components */
+.app-layout {
+  min-height: 100vh;
+  transition: all 0.3s ease;
+}
+
+.app-layout.rtl {
+  direction: rtl;
+}
+
+.app-layout.ltr {
+  direction: ltr;
+}
+
+/* Ant Design RTL Overrides */
+.ant-layout {
+  direction: inherit;
+}
+
+.ant-menu {
+  direction: inherit;
+}
+
+.ant-menu-item {
+  direction: inherit;
+}
+
+.ant-menu-submenu {
+  direction: inherit;
+}
+
+.ant-dropdown {
+  direction: inherit;
+}
+
+.ant-modal {
+  direction: inherit;
+}
+
+.ant-drawer {
+  direction: inherit;
+}
+
+.ant-message {
+  direction: inherit;
+}
+
+.ant-notification {
+  direction: inherit;
+}
+
+/* RTL Specific Ant Design Adjustments */
+body.rtl .ant-menu-item-icon,
+body.rtl .ant-menu-submenu-title .anticon {
+  margin-left: 0;
+  margin-right: 12px;
+}
+
+body.rtl .ant-menu-submenu-arrow {
+  right: 16px;
+  left: auto;
+}
+
+body.rtl .ant-menu-item-selected {
+  border-right: none;
+  border-left: 3px solid #1890ff;
+}
+
+body.rtl .ant-menu-sub .ant-menu-item {
+  padding-right: 16px !important;
+  padding-left: 48px !important;
+}
+
+body.rtl .ant-dropdown-menu-item {
+  text-align: right;
+}
+
+body.rtl .ant-modal-header {
+  text-align: right;
+}
+
+body.rtl .ant-modal-footer {
+  text-align: left;
+}
+
+body.rtl .ant-drawer-header {
+  text-align: right;
+}
+
+body.rtl .ant-drawer-footer {
+  text-align: left;
+}
+
+/* LTR Specific Ant Design Adjustments */
+body.ltr .ant-menu-item-icon,
+body.ltr .ant-menu-submenu-title .anticon {
+  margin-right: 0;
+  margin-left: 12px;
+}
+
+body.ltr .ant-menu-submenu-arrow {
+  left: 16px;
+  right: auto;
+}
+
+body.ltr .ant-menu-item-selected {
+  border-left: none;
+  border-right: 3px solid #1890ff;
+}
+
+body.ltr .ant-menu-sub .ant-menu-item {
+  padding-left: 16px !important;
+  padding-right: 48px !important;
+}
+
+body.ltr .ant-dropdown-menu-item {
+  text-align: left;
+}
+
+body.ltr .ant-modal-header {
+  text-align: left;
+}
+
+body.ltr .ant-modal-footer {
+  text-align: right;
+}
+
+body.ltr .ant-drawer-header {
+  text-align: left;
+}
+
+body.ltr .ant-drawer-footer {
+  text-align: right;
+}
+
+/* Utility Classes */
+.text-right { text-align: right; }
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+
+.float-right { float: right; }
+.float-left { float: left; }
+
+.margin-right { margin-right: 1rem; }
+.margin-left { margin-left: 1rem; }
+
+.padding-right { padding-right: 1rem; }
+.padding-left { padding-left: 1rem; }
+
+/* RTL Utility Classes */
+body.rtl .text-right { text-align: left; }
+body.rtl .text-left { text-align: right; }
+body.rtl .float-right { float: left; }
+body.rtl .float-left { float: right; }
+body.rtl .margin-right { margin-left: 1rem; margin-right: 0; }
+body.rtl .margin-left { margin-right: 1rem; margin-left: 0; }
+body.rtl .padding-right { padding-left: 1rem; padding-right: 0; }
+body.rtl .padding-left { padding-right: 1rem; padding-left: 0; }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.75rem; }
+  h3 { font-size: 1.5rem; }
+  h4 { font-size: 1.25rem; }
+  h5 { font-size: 1.1rem; }
+  h6 { font-size: 1rem; }
+}
+
+@media (max-width: 576px) {
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.25rem; }
+  h4 { font-size: 1.1rem; }
+  h5 { font-size: 1rem; }
+  h6 { font-size: 0.9rem; }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #141414;
+    color: #fff;
+  }
+  
+  html {
+    background: #141414;
+  }
+}
+
+/* Print Styles */
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+  
+  .no-print {
+    display: none !important;
+  }
+} 

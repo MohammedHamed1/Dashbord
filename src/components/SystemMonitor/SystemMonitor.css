@@ -1,0 +1,324 @@
+.system-monitor {
+  padding: 24px;
+  background: #f5f5f5;
+  min-height: 100vh;
+}
+
+.system-monitor .ant-card {
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section-card,
+.user-card {
+  transition: all 0.3s ease;
+  border-left: 4px solid #d9d9d9;
+}
+
+.section-card:hover,
+.user-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.section-card.success,
+.user-card.success {
+  border-left-color: #52c41a;
+  background: linear-gradient(135deg, #f6ffed 0%, #ffffff 100%);
+}
+
+.section-card.warning,
+.user-card.warning {
+  border-left-color: #faad14;
+  background: linear-gradient(135deg, #fffbe6 0%, #ffffff 100%);
+}
+
+.section-card.error,
+.user-card.error {
+  border-left-color: #ff4d4f;
+  background: linear-gradient(135deg, #fff2f0 0%, #ffffff 100%);
+}
+
+.system-monitor .ant-statistic {
+  text-align: center;
+}
+
+.system-monitor .ant-statistic-title {
+  font-size: 14px;
+  color: #666;
+}
+
+.system-monitor .ant-statistic-content {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.system-monitor .ant-alert {
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.system-monitor .ant-alert ul {
+  margin: 0;
+  padding-right: 16px;
+}
+
+.system-monitor .ant-alert li {
+  margin-bottom: 4px;
+  font-size: 13px;
+}
+
+.system-monitor .ant-badge {
+  font-size: 12px;
+}
+
+.system-monitor .ant-tabs-tab {
+  font-weight: 500;
+}
+
+.system-monitor .ant-tabs-tab-active {
+  font-weight: 600;
+}
+
+.system-monitor .ant-progress {
+  margin-bottom: 24px;
+}
+
+.system-monitor .ant-progress-text {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.system-monitor .ant-btn {
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.system-monitor .ant-btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+}
+
+.system-monitor .ant-btn-primary:hover {
+  background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+  transform: translateY(-1px);
+}
+
+.system-monitor .ant-card-head {
+  border-bottom: 1px solid #f0f0f0;
+  padding: 16px 24px;
+}
+
+.system-monitor .ant-card-body {
+  padding: 24px;
+}
+
+.system-monitor .ant-space {
+  gap: 12px;
+}
+
+.system-monitor .ant-tag {
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.system-monitor .ant-modal-content {
+  border-radius: 12px;
+}
+
+.system-monitor .ant-modal-header {
+  border-radius: 12px 12px 0 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.system-monitor .ant-modal-title {
+  color: white;
+  font-weight: 600;
+}
+
+.system-monitor .ant-modal-close {
+  color: white;
+}
+
+.system-monitor .ant-modal-close:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* تحسينات للشاشات الصغيرة */
+@media (max-width: 768px) {
+  .system-monitor {
+    padding: 16px;
+  }
+  
+  .system-monitor .ant-card-body {
+    padding: 16px;
+  }
+  
+  .system-monitor .ant-statistic-content {
+    font-size: 20px;
+  }
+  
+  .system-monitor .ant-space {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .system-monitor .ant-space .ant-btn {
+    width: 100%;
+  }
+}
+
+/* تحسينات للوضع المظلم */
+@media (prefers-color-scheme: dark) {
+  .system-monitor {
+    background: #141414;
+  }
+  
+  .system-monitor .ant-card {
+    background: #1f1f1f;
+    border-color: #303030;
+  }
+  
+  .section-card.success,
+  .user-card.success {
+    background: linear-gradient(135deg, #162312 0%, #1f1f1f 100%);
+  }
+  
+  .section-card.warning,
+  .user-card.warning {
+    background: linear-gradient(135deg, #2b2111 0%, #1f1f1f 100%);
+  }
+  
+  .section-card.error,
+  .user-card.error {
+    background: linear-gradient(135deg, #2a1215 0%, #1f1f1f 100%);
+  }
+}
+
+/* تأثيرات حركية */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.section-card.error,
+.user-card.error {
+  animation: pulse 2s infinite;
+}
+
+/* تحسين عرض القوائم */
+.system-monitor .ant-list {
+  background: transparent;
+}
+
+.system-monitor .ant-list-item {
+  border-bottom: 1px solid #f0f0f0;
+  padding: 12px 0;
+}
+
+.system-monitor .ant-list-item:last-child {
+  border-bottom: none;
+}
+
+/* تحسين عرض الجداول */
+.system-monitor .ant-table {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.system-monitor .ant-table-thead > tr > th {
+  background: #fafafa;
+  font-weight: 600;
+}
+
+/* تحسين عرض الأيقونات */
+.system-monitor .anticon {
+  font-size: 16px;
+}
+
+.system-monitor .ant-statistic .anticon {
+  font-size: 20px;
+  margin-left: 8px;
+}
+
+/* تحسين عرض النصوص */
+.system-monitor .ant-typography {
+  font-family: 'Cairo', sans-serif;
+}
+
+.system-monitor .ant-typography h1,
+.system-monitor .ant-typography h2,
+.system-monitor .ant-typography h3,
+.system-monitor .ant-typography h4,
+.system-monitor .ant-typography h5 {
+  font-family: 'Cairo', sans-serif;
+  font-weight: 600;
+}
+
+/* تحسين عرض الأزرار */
+.system-monitor .ant-btn {
+  font-family: 'Cairo', sans-serif;
+  font-weight: 500;
+  height: 40px;
+  padding: 0 16px;
+}
+
+.system-monitor .ant-btn-lg {
+  height: 48px;
+  padding: 0 24px;
+  font-size: 16px;
+}
+
+/* تحسين عرض البطاقات */
+.system-monitor .ant-card {
+  font-family: 'Cairo', sans-serif;
+}
+
+.system-monitor .ant-card-head-title {
+  font-family: 'Cairo', sans-serif;
+  font-weight: 600;
+}
+
+/* تحسين عرض التبويبات */
+.system-monitor .ant-tabs-tab {
+  font-family: 'Cairo', sans-serif;
+  font-weight: 500;
+  padding: 12px 16px;
+}
+
+.system-monitor .ant-tabs-tab-active {
+  font-weight: 600;
+}
+
+/* تحسين عرض الإحصائيات */
+.system-monitor .ant-statistic-title {
+  font-family: 'Cairo', sans-serif;
+  font-weight: 500;
+}
+
+.system-monitor .ant-statistic-content {
+  font-family: 'Cairo', sans-serif;
+  font-weight: 600;
+}
+
+/* تحسين عرض التنبيهات */
+.system-monitor .ant-alert {
+  font-family: 'Cairo', sans-serif;
+}
+
+.system-monitor .ant-alert-message {
+  font-weight: 600;
+}
+
+.system-monitor .ant-alert-description {
+  font-size: 14px;
+  line-height: 1.6;
+} 
